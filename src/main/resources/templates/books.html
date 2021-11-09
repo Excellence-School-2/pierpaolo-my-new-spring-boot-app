@@ -1,13 +1,14 @@
 QUI ANDRò A METTERE LA MIA LISTA DI LIBRI
-<!DOCTYPE html >
-<html lang="en" xmlns:th="http://www.thymeleaf.org"></html>>
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE = edge">
-    <meta name = "viewport" content="width= device-width, initial-scale= 1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
 <body>
+
     <table>
         <tr>
             <th>ID</th>
@@ -15,12 +16,18 @@ QUI ANDRò A METTERE LA MIA LISTA DI LIBRI
             <th>ISBN</th>
             <th>Author</th>
         </tr>
-        <tr th:each="book: ${books}">
-            <td th:text="${books.id}">123</td>
-            <td th:text="${books.title}">Title Example</td>
-            <td th:text="${books.isbn}">123-asd</td>
-            <td th:text="${books.author.getName()}">Carlo</td>
+        <tr th:each="book : ${books}">
+            <td th:text="${book.getID()}">123</td>
+            <td th:text="${book.title}">TitleSample</td>
+            <td th:text="${book.isbn}">ABC123</td>
+            <td th:text="${book.author.getName()}">Carlo</td>
+            
         </tr>
+
+
+
+
     </table>
+    
 </body>
 </html>
